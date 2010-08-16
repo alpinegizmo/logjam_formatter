@@ -1,4 +1,4 @@
-This gem provides syslog-compatible logging for rails applications.
+This gem provides syslog-style logging for rails applications.
 
 Standard rails log:
 
@@ -6,7 +6,7 @@ Standard rails log:
   
 With logjam_formatter, including optional user_id:
 
-    Dec 18 17:36:17 elk rails[13902] user[10]: Completed 200 OK in 103ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+    Dec 18 17:36:17 elk rails[13902]: INFO user[10]: Completed 200 OK in 103ms (Views: 83.7ms | ActiveRecord: 0.0ms)
   
 ## Installation
 
