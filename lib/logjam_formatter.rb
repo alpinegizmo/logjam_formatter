@@ -1,7 +1,8 @@
 module Logjam
   class Formatter < ::Logger::Formatter
     def call(severity, time, progname, msg)
-      "#{time.strftime("%b %d %H:%M:%S")} #{hostname} rails[#{$PID}]: #{severity}#{user_id}: #{msg.gsub(/\n/, '').lstrip}\n"
+      msg = msg.gsub(/\n/, '').lstrip if msg.kind_of?(String)
+      "#{time.strftime("%b %d %H:%M:%S")} #{hostname} rails[#{$PID}]: #{severity}#{user_id}: #{msg}\n"
     end
 
     private
